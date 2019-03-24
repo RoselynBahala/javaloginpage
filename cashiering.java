@@ -1313,6 +1313,8 @@ try {
                  String id = "SELECT * FROM `m_customers` WHERE m_pro='"+p+"'";
                  ResultSet rs5 = stmt5.executeQuery(id);
                  rs5.next();
+if(rs5.next()){
+    
 
                  int custID = rs5.getInt("m_cust_id");
             
@@ -1320,7 +1322,7 @@ try {
                          + "values ('"+custID+"','"+p+"','"+q+"','"+ti+"','"+da+"','"+st+"');");
                  pro1.executeUpdate();
             
-                 
+}
                  JOptionPane.showMessageDialog(rootPane, "Successfuly Sceduled ");
             
         } catch (ClassNotFoundException ex) {
